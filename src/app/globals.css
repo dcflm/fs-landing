@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Отключить выделение текста */
+* {
+  user-select: none; /* Отключает возможность выделения текста */
+  -webkit-user-select: none; /* Для браузеров на движке WebKit */
+  -moz-user-select: none; /* Для Firefox */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Отключить перетаскивание элементов */
+img, a {
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Styles for snap container and sections */
+.snap-container {
+  scroll-behavior: smooth;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.snap-section {
+  height: 100vh; /* Each section takes full viewport height */
+  scroll-snap-align: center;
 }
+
