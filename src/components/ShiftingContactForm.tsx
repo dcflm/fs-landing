@@ -7,7 +7,7 @@ const ShiftingContactForm = () => {
     "individual"
   );
   return (
-    <section className="p-4 my-44 bg-white">
+    <section id="contact-form" className="p-4 my-44 bg-white">
       <div className="w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden">
         <Form selected={selected} setSelected={setSelected} />
         <Images selected={selected} />

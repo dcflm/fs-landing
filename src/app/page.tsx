@@ -3,6 +3,7 @@
 
 import CardCarousel from "@/components/CardCarousel";
 import { CountUpStats } from "@/components/CountUpStats";
+import FloatingButton from "@/components/FloatingButton";
 import HeaderComponent from "@/components/HeaderComponent";
 import Navbar from "@/components/Navbar";
 import ShiftingContactForm from "@/components/ShiftingContactForm";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <FloatingButton />
       <HeaderComponent />
       <CardCarousel />
       <SquishyPricing />
